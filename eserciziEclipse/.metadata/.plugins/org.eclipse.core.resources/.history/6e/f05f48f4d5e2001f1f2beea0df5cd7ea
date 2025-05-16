@@ -1,0 +1,18 @@
+import java.lang.reflect.*;
+public class Esempio_ref_calcolatrice {
+
+	public static void main(String[] args) {
+		
+		try {
+			Class c = Class.forName("Calcolatrice_ref");
+			
+			Method [] metodi = c.getDeclaredMethods();
+			
+			System.out.println("Metodi della classe " + c.getName());
+		} catch(ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+
+	}
+
+}

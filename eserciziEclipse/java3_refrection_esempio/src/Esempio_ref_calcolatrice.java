@@ -1,0 +1,23 @@
+import java.lang.reflect.*;
+public class Esempio_ref_calcolatrice {
+
+	public static void main(String[] args) {
+		
+		try {
+			Class c = Class.forName("Calcolatrice_ref");  //cerca una classe col nome Calcolatrice_ref
+			
+			Method [] metodi = c.getDeclaredMethods(); //je chiede tutti i metodi
+			
+			System.out.println("Metodi della classe " + c.getName());
+			
+			for(Method metodo : metodi) {
+				System.out.println("Metodo " + metodo.getName()); //printa metodo per metodo
+			}
+			
+			} catch(ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+
+	}
+
+}

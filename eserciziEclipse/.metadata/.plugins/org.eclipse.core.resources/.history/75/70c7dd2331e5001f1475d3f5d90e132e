@@ -1,0 +1,23 @@
+import java.util.LinkedList;
+
+public class Cliente {
+	String ID;
+	String nome;
+	String cognome;
+	String email;
+	String password;
+	LinkedList<Prodotto> prodotti_acqustati = new LinkedList<>(); //lista dei prodotti acquistati dal cliente
+	Boolean registrato;//variabile che dice se il cliente è registrato o no
+	public Cliente(String iD, String nome, String cognome, String email, String password,
+			LinkedList<Prodotto> prodotti_acqustati, Boolean registrato) {
+		super();
+		ID = iD;
+		this.nome = nome;
+		this.cognome = cognome;
+		this.email = email;
+		this.password = password;
+		this.prodotti_acqustati = prodotti_acqustati;
+		this.registrato = registrato;
+	} //variabile che dice se il cliente è registrato o no
+	
+	

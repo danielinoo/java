@@ -1,0 +1,22 @@
+import java.lang.reflect.Field;
+
+public class esempio_ref_persona {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Persona p =  new Persona();
+		try {
+			Field campoNome = Persona.class.getDeclaredField("nome");  //va a cercare un campo di nome "nome"
+			campoNome.setAccessible(true); //per rendere il campo accessibile
+			
+			System.out.println("Valore del campo nome:" + campoNome.get(p));
+		} catch (NoSuchFieldException) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SecurityException e){
+			e.printStackTrace();
+			
+		}
+	}
+
+}

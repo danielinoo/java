@@ -1,0 +1,6 @@
+import java.lang.reflect.*;
+public class ref_esercizio7_persona throw NoSuchFieldException{
+	
+	Field CerN = Persona.class.getDeclaredField("nome");
+
+}

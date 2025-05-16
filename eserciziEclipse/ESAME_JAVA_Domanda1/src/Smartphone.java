@@ -1,0 +1,38 @@
+
+
+public class Smartphone extends Prodotto {
+	String azienda_produttrice;
+	String sistema_operativo;
+
+	public Smartphone(String iD, String nome, String descrizione, double prezzo,
+			String azienda_produttrice, String sistema_operativo) {
+		super(iD, nome, descrizione, prezzo);
+		this.azienda_produttrice = azienda_produttrice;
+		this.sistema_operativo = sistema_operativo;
+	}
+
+	public String getAzienda_produttrice() {
+		return azienda_produttrice;
+	}
+
+	public void setAzienda_produttrice(String azienda_produttrice) {
+		this.azienda_produttrice = azienda_produttrice;
+	}
+
+	public String getSistema_operativo() {
+		return sistema_operativo;
+	}
+
+	public void setSistema_operativo(String sistema_operativo) {
+		this.sistema_operativo = sistema_operativo;
+	}
+
+	@Override
+	public String toString() {
+		return "Smartphone [azienda_produttrice=" + azienda_produttrice + ", sistema_operativo=" + sistema_operativo
+				+ ", toString()=" + super.toString() + "]";
+	}
+
+
+	
+}

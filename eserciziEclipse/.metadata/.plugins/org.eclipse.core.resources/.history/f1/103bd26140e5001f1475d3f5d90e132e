@@ -1,0 +1,4 @@
+
+public class scrive_messaggio extends Thread{
+
+}

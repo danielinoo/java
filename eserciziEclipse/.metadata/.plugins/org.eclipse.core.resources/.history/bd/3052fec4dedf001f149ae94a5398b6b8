@@ -1,0 +1,5 @@
+
+public class Somma {
+
+	public static Int calcolasomma(int,int);
+}

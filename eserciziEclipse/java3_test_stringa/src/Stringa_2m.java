@@ -1,0 +1,36 @@
+
+
+public class Stringa_2m {
+	
+	public int calcolacarattere(char a , String frase) {
+		int cont = 0;
+		for (char i : frase.toCharArray()) { //controllo lettera per lettera
+			
+			if(a  == i) {
+				cont ++;
+			}
+			
+		}
+			
+		
+		return cont;
+		
+	}
+	
+	public Boolean pal(String parola) {
+		StringBuilder parola_rev = new StringBuilder(parola); //StringBuilder --> server per modificare le stringe
+		
+		parola_rev.reverse(); //per rigirare la parola
+		
+		if (parola.equals(parola_rev.toString())) { //parola_rev.toString() --> parola invertita con reverse
+			return true;
+		}else {
+			return false;
+		}
+		
+		
+	}
+	
+	
+
+}

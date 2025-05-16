@@ -1,0 +1,11 @@
+import java.util.LinkedList;
+
+public class Smartphone extends Prodotto{
+	String azienda_produttrice;
+	String sistema_operativo;
+	
+	
+	
+	
+
+}

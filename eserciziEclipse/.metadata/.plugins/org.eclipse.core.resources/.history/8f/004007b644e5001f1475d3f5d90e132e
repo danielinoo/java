@@ -1,0 +1,14 @@
+
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//LinkedList<String> casella_postale = new LinkedList<>();
+		
+		Thread scrive = new scrive_messaggio();
+		scrive.start();
+
+	}
+
+}

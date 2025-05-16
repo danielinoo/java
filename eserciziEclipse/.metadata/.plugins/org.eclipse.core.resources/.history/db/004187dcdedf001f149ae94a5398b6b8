@@ -1,0 +1,9 @@
+
+public class Somma {
+
+}
+public static calcolasomma(int a ,int b ) {
+	
+	return a+b;
+	
+}

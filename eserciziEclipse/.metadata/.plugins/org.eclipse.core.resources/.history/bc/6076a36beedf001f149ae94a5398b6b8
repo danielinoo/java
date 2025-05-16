@@ -1,0 +1,40 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedList;
+
+public class Stringa_2m {
+	
+	public int calcolacarattere(char a , String frase) {
+		int cont = 0;
+		for (char i : frase.toCharArray()) { //controllo lettera per lettera
+			
+			if(a  == i) {
+				cont ++;
+			}
+			
+		}
+			
+		
+		return cont;
+		
+	}
+	
+	public Boolean pal(String parola) {
+		Boolean v = null;
+		StringBuilder parola_rev = new StringBuilder(parola); //StringBuilder --> server per modificare le stringe
+		
+		parola_rev.reverse(); //per rigirare la parola
+		
+		if (parola == parola_rev.toString()) { //parola_rev.toString() --> parola invertita con reverse
+			v = true;
+		}else {
+			v = false;
+		}
+		
+		return v;
+		
+	}
+	
+	
+
+}

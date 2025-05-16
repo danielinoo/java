@@ -1,0 +1,7 @@
+import java.lang.reflect.*;
+public class ref_esercizio7_persona{
+	Field cercaNome = cercaP.class.getDeclaredField("nome");
+	
+	cercaNome.setAccessible(true);
+	
+}

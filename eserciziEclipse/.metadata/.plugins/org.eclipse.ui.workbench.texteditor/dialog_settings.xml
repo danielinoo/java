@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="hasShownOverlayPopupBefore" value="true"/>
+	<item key="replaceBarOpen" value="true"/>
+	<list key="replacehistory">
+		<item value="prodotto"/>
+		<item value="venditore"/>
+		<item value="prodottoDTO "/>
+		<item value="profottoDTO "/>
+		<item value="prodottoDTO"/>
+		<item value="venditori"/>
+		<item value="rubricaEntity"/>
+		<item value="entity"/>
+		<item value="contattoEntity"/>
+		<item value="contatto"/>
+		<item value="DTO"/>
+		<item value="impiegatoEntity"/>
+		<item value="impiegato"/>
+		<item value="r"/>
+		<item value="annoImmatricolazione"/>
+	</list>
+	<list key="searchhistory">
+		<item value="contattoEntity"/>
+		<item value="rubricaEntity"/>
+		<item value="rubricaDTO "/>
+		<item value="contattoDTO"/>
+		<item value="venditori"/>
+		<item value="impiegatoEntity"/>
+		<item value="rubrica"/>
+		<item value=" Rubrica "/>
+		<item value="Rubrica"/>
+		<item value="Contatto "/>
+		<item value="Contatto"/>
+		<item value=" Contatto"/>
+		<item value="Entity"/>
+		<item value="studente"/>
+		<item value="Studente"/>
+	</list>
+	<section name="org.eclipse.ui.texteditor.GotoLineAction$GotoLineDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="206"/>
+		<item key="DIALOG_Y_ORIGIN" value="368"/>
+	</section>
+</section>

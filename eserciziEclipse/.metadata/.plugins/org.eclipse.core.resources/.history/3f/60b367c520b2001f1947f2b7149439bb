@@ -1,0 +1,21 @@
+import java.util.Random;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Random 	rng = new Random();
+		
+		for (i = 0; i<100,i++) {
+			
+		}
+		
+		
+	}
+
+	private static Double Dividi(int i, int j) {
+		Double q = (double)i / (double)j;
+		return q;
+	}
+}

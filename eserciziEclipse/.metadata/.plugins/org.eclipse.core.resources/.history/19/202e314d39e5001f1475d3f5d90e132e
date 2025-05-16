@@ -1,0 +1,56 @@
+
+import java.util.*;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Cliente c1 = new Cliente("IDU1234", "Marco", "Bianchi", "Marco_b@gmail.com", "P2485");
+		Cliente c2 = new Cliente("IDU6948", "Giovanni", "Rossi", "giovanni_rossi@gmail.com", "P1234");
+		Cliente c3 = new Cliente("IDU4859", "Francesco", "Russo", "Frarus@gmail.com", "P1047");
+		Cliente c4 = new Cliente("IDU1234", "Ciro", "Esposito", "esposito@gmail.com", "P1659");
+		
+		Smartphone s1 = new Smartphone("ID4367", "Iphone23", "Nuovo Iphone", 1456, "Apple", "IOS");
+		Smartphone s2 = new Smartphone("ID4367", "redmi 56", "Nuovo Redmi", 400, "Redmi", "ANDROID");
+		Televisore t1 = new Televisore("IDTsk30", "LG600", "nuovo lg", 900, "55", "LG");
+		Televisore t1 = new Televisore("IDT5UI3", "SAMSUNGRST", "nuovo televisore samsung", 1200, "60", "SAMSUNG");
+		//lista degli utenti registrati
+		LinkedList<Cliente> lr= new LinkedList<>();
+		
+		//registro i quattro clienti che mo creato
+		Registra_cliente(c1, lr);
+		Registra_cliente(c2, lr);
+		Registra_cliente(c3, lr);
+		Registra_cliente(c4, lr);
+		
+		//acquisti dei clienti
+		risposta_acquisto(c1, s1);
+				
+	
+	}
+
+	private static void risposta_acquisto(Cliente c, Prodotto p) {
+		// TODO Auto-generated method stub
+		String r = c.Acquisto(p); //effettuo l acquisto del prodotto e prento r (risposta)
+		
+		System.out.println(c.nome + " " + c.cognome + " " + r +  " " + p.nome );
+		System.out.println();
+		
+	}
+
+	static void Registra_cliente(Cliente c, LinkedList<Cliente> lr) {
+		
+		if (c.registrato == false) {
+			lr.add(c); //aggiungo cliente alla lista delle registrazioni
+			c.registrato = true; //cambio lo stato di registrazione a true
+			System.out.println(c.nome + " " +c.cognome + " registrato");
+			System.out.println();
+			
+		}else {
+			System.out.println(c.nome + " " +c.cognome + "già registrato");
+			System.out.println();
+		}
+		
+	}
+
+}

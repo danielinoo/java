@@ -1,0 +1,29 @@
+import java.util.LinkedList;
+
+public class Casella_postale{
+    private LinkedList<String> cartella_messaggi = new LinkedList<>();
+
+    public synchronized void scrivi(String messaggio_scrittura) {
+        cartella_messaggi.add(messaggio_scrittura);
+        System.out.println("scritto: " + messaggio_scrittura);
+        notify();  // Avvisa lettore_messaggio
+    }
+    
+    public synchronized void finisciScrittura() {
+        finitoScrivere  = true; // Indica che lo scrittore ha finito
+        notify();  // Avvisa il lettore che può iniziare a leggere
+    }
+
+    public synchronized String leggi() {
+        while (cartella_messaggi.isEmpty()) {
+            try {
+                wait();  // Aspetta che vengono inseriti i messaggi
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+        String messaggio_letto = cartella_messaggi.removeFirst();
+        System.out.println("letto: " + messaggio_letto);
+        return messaggio_letto;
+    }
+}

@@ -1,0 +1,10 @@
+
+public class Stringa_2m {
+	
+	public int calcolacarattere(String a, String Frase) {
+		
+		return cont;
+		
+	}
+
+}

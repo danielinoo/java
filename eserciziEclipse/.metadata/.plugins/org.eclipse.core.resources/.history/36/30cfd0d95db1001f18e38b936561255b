@@ -1,0 +1,63 @@
+import java.io.IOException;
+import java.lang.reflect.Array;
+import java.util.*;
+public class Main {
+
+    public static void main(String[] args) {
+        
+        LinkedList<WiFi> lwifi = new LinkedList<WiFi>();
+        
+        for(int i = 0; i < 10; i++) {
+            lwifi.add(WiFi.MakeWifi());
+        }
+        
+        for(var x:lwifi) {
+            String a = String.format("%s,%s,%s,%f\n", x.getId(),x.getProtocollo(),
+                    x.getPassword(),x.getFrequenza());
+            System.out.println(a);
+        }
+        var fou = Util.OpenFileForWriting("wifi.dat");
+        for (var x : lwifi) {
+            String a = String.format("%s,%s,%s,%f\n", x.getId(),x.getProtocollo(),
+                    x.getPassword(),x.getFrequenza());
+            try {
+                fou.write(a);
+            }catch(IOException e) {
+                e.printStackTrace();
+            }
+        }
+        try {
+            fou.close();
+        }catch(IOException e) {
+            e.printStackTrace();
+        }
+        
+        lwifi.clear();
+       
+        
+        //prendo il file in lettura
+       var la =Util.OpenFileForReading("wifi.dat");
+       
+       Array testo = new Array;
+		
+       
+       for(int i = 0; i < 10; i++) {
+    	   try {
+			var linea = la.readLine();
+			
+			testo.add(linea);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	  System.out.println(testo);
+    	
+    	   
+       }
+       
+      
+       
+       
+    }
+
+}

@@ -1,0 +1,8 @@
+
+public class Televisore extends Prodotto{
+	
+	String numero_pollici;
+	String azienda_produttrice;
+	
+
+}

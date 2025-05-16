@@ -1,0 +1,16 @@
+import java.util.LinkedList;
+
+public class scrive_messaggio extends Thread {
+	LinkedList<String> casella_scrive = new LinkedList<>(); 
+
+	public void run() {
+		String mess = "messaggio";
+		for (int i = 0; i == 10; i++ ) {
+		
+		mess = mess + i;
+		System.out.println(mess);
+			
+		}
+		
+	}
+}

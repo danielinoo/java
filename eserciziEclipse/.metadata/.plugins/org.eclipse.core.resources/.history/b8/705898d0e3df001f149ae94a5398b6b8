@@ -1,0 +1,27 @@
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class test_calcolatrice {
+
+	@Test
+	void test_somma() {
+		fail("Not yet implemented");
+	}
+	
+	@Test
+	void test_sottrazione() {
+		fail("Not yet implemented");
+	}
+	
+	@Test
+	void test_moltiplicazione(){
+		fail("Not yet implemented");
+	}
+	
+	@Test
+	void test_divisione() {
+		fail("Not yet implemented");
+	}
+
+}

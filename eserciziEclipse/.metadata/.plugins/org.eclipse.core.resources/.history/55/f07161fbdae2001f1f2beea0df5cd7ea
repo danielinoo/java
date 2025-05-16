@@ -1,0 +1,53 @@
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		try {
+			Class c = Class.forName("Cane");
+
+			System.out.println("Nome classe = " + c.getName());
+
+			Cane c1 = new Cane();
+
+			Class b = c1.getClass();
+
+			System.out.println("b Ã¨ ora la classe " + b.getName());
+
+			Method[] metodi = c.getDeclaredMethods();
+
+			System.out.println("Metodi della classe " + b.getName());
+
+			for (Method metodo : metodi) {
+
+				System.out.println("Metodo = " + metodo.getName());
+
+			}
+
+			String str = "Hello, world!";
+			Method metodo = String.class.getMethod("toUpperCase");
+			String risultato = (String) metodo.invoke(str);
+			System.out.println("Risultato: " + risultato);
+
+		} catch (ClassNotFoundException e) {
+// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (NoSuchMethodException e) {
+// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SecurityException e) {
+// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IllegalAccessException e) {
+// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (InvocationTargetException e) {
+// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+}

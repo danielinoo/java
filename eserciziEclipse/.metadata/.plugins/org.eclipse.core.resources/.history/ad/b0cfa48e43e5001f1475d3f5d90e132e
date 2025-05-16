@@ -1,0 +1,7 @@
+
+public class lettore_messaggi extends new Runnable() {
+	public void run() {
+		
+	}
+}
+

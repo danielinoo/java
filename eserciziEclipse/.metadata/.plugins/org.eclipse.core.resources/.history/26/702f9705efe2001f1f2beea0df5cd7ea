@@ -1,0 +1,5 @@
+import java.lang.reflect.*;
+public class ref_esercizio7_persona {
+	
+	Persona p = new Persona();
+}

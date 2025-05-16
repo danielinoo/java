@@ -1,0 +1,17 @@
+
+public class Stringa_2m {
+	
+	public int calcolacarattere(String a, String Frase) {
+		int cont = 0;
+		char[] lettere = frase.toCharArray();
+		
+		for (i : Frase) {
+			
+		}
+			
+		
+		return cont;
+		
+	}
+
+}

@@ -1,0 +1,13 @@
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+
+class test_somma { //test della classe Somma
+
+	@Test
+	void test_calcolasomma() { //per testare se il metodo calcolasomma riturna il risultato giusto
+		Somma s = new Somma();
+		
+		assertEquals(2, s.calcolasomma(1, 2)); //verifica il metodo ritorna 2 (sarà falso)
+	}
+
+}

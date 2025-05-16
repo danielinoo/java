@@ -1,0 +1,18 @@
+
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Casella_postale cp = new Casella_postale();
+		
+		Thread scrive = new Scrittore_messaggi(cp);
+		Thread legge = new Lettore_messaggi(cp);
+		
+		scrive.start();
+		legge.start();
+
+
+	}
+
+}

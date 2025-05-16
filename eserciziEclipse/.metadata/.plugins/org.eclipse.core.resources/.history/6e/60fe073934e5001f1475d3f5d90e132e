@@ -1,0 +1,36 @@
+import java.util.LinkedList;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Cliente c1 = new Cliente("ID1234", "Marco", "Rossi", "Marco_rossi@gmail.com", "P1234");
+		Cliente c2 = new Cliente("ID1234", "Marco", "Rossi", "Marco_rossi@gmail.com", "P1234");
+		Cliente c3 = new Cliente("ID1234", "Marco", "Rossi", "Marco_rossi@gmail.com", "P1234");
+		Cliente c4 = new Cliente("ID1234", "Marco", "Rossi", "Marco_rossi@gmail.com", "P1234");
+		
+		//lista degli utenti registrati
+		LinkedList<Cliente> lr= new LinkedList<>();
+		
+		Registra_cliente(c1, lr);
+		
+		c1.Acquisto();
+				
+	
+	}
+
+	static void Registra_cliente(Cliente c, LinkedList<Cliente> lr) {
+		
+		if (c.registrato == false) {
+			lr.add(c); //aggiungo cliente alla lista delle registrazioni
+			c.registrato = true; //cambio lo stato di registrazione a true
+			System.out.println(c.nome + c.cognome + "registrato");
+		
+			
+		}else {
+			System.out.println("utente già registrato");
+		}
+		
+	}
+
+}

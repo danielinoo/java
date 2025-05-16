@@ -1,0 +1,10 @@
+import java.lang.reflect.*;
+
+public class esercizio7_ref_persona_nome {
+
+	public static void main(String[] args) {
+		Field cercaNome = Persona.class.getDeclaredField("nome");
+
+	}
+
+}

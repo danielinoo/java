@@ -1,0 +1,20 @@
+orretta.
+class JUnitException {
+void testException() throws Exception {
+throw new Exception("Eccezione JUnit");
+}
+public static void main(String[] args) throws Exception {
+JUnitException ex = new JUnitException();
+ex.testException();
+}
+}
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+class JUnitExceptionTest {
+@Test
+void testTestException() {
+JUnitException ex = new JUnitException();
+Exception exception = assertThrows(Exception.class, () ‐> ex.testException());
+assertEquals("Eccezione JUnit", exception.getMessage());
+}
+}

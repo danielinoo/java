@@ -1,0 +1,79 @@
+import java.util.LinkedList;
+import java.util.Random;
+
+public class Prodotto {
+
+	String ID;
+	String nome;
+	String descrizione;
+	double prezzo;
+	LinkedList<String> negozio = new LinkedList<>(); 
+
+
+	public Prodotto(String iD, String nome, String descrizione, double prezzo) {
+		super();
+		ID = iD;
+		this.nome = nome;
+		this.descrizione = descrizione;
+		this.prezzo = prezzo;
+		
+		//inserimento negozi
+		negozio.add("negozio roma ovest");
+		negozio.add("negozio anzio");
+		negozio.add("negozio roma centro");
+	}
+
+	public String getID() {
+		return ID;
+	}
+
+	public void setID(String iD) {
+		ID = iD;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public String getDescrizione() {
+		return descrizione;
+	}
+
+	public void setDescrizione(String descrizione) {
+		this.descrizione = descrizione;
+	}
+
+	public double getPrezzo() {
+		return prezzo;
+	}
+
+	public void setPrezzo(double prezzo) {
+		this.prezzo = prezzo;
+	}
+
+	public LinkedList<String> getNegozio() {
+		return negozio;
+	}
+
+	public void setNegozio(LinkedList<String> negozio) {
+		this.negozio = negozio;
+	}
+
+	@Override
+	public String toString() {
+		return "Prodotto [ID=" + ID + ", nome=" + nome + ", descrizione=" + descrizione + ", prezzo=" + prezzo
+				+ ", negozio=" + negozio + "]";
+	}
+
+	public String negozio_random() {
+		// TODO Auto-generated method stub
+		Random rand = new Random();
+		int randomIndex = rand.nextInt(3);
+		return risposta;
+	}
+
+}

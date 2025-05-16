@@ -1,0 +1,38 @@
+
+
+public class Calcolatrice_v2 {
+
+
+	public Calcolatrice() {
+		super();
+	}
+
+	public double somma(double a, double b) {
+		logger.info("somma eseguita");
+
+		return a + b;
+
+	};
+
+	public  double sottrazione(double a, double b) {
+		logger.info("sottrazione eseguita");
+
+		return a - b;
+
+	};
+
+	public  double moltiplicazione(double a, double b) {
+		logger.info("moltiplicazione eseguita");
+
+		return a * b;
+
+	};
+
+	public double divisione(double a, double b) {
+		logger.info("divisione eseguita");
+
+		return a / b;
+
+	}
+
+}

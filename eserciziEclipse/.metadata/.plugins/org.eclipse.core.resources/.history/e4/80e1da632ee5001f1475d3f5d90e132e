@@ -1,0 +1,11 @@
+import java.util.LinkedList;
+
+public class Prodotto {
+	
+	String ID;
+	String nome;
+	String descrizione;
+	double prezzo;
+	LinkedList<String>negozio = new LinkedList<>();
+
+}

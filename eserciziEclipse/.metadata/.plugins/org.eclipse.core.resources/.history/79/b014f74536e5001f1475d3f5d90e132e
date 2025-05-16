@@ -1,0 +1,38 @@
+import java.util.LinkedList;
+
+public class Televisore extends Prodotto {
+
+	String numero_pollici;
+	String azienda_produttrice;
+
+	public Televisore(String iD, String nome, String descrizione, double prezzo,
+		super(iD, nome, descrizione, prezzo);
+		this.numero_pollici = numero_pollici;
+		this.azienda_produttrice = azienda_produttrice;
+	}
+
+	public String getNumero_pollici() {
+		return numero_pollici;
+	}
+
+	public void setNumero_pollici(String numero_pollici) {
+		this.numero_pollici = numero_pollici;
+	}
+
+	public String getAzienda_produttrice() {
+		return azienda_produttrice;
+	}
+
+	public void setAzienda_produttrice(String azienda_produttrice) {
+		this.azienda_produttrice = azienda_produttrice;
+	}
+
+	@Override
+	public String toString() {
+		return "Televisore [numero_pollici=" + numero_pollici + ", azienda_produttrice=" + azienda_produttrice
+				+ ", toString()=" + super.toString() + "]";
+	}
+	
+	
+
+}

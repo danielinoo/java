@@ -1,0 +1,35 @@
+import java.lang.reflect.*;
+
+public class esercizio7_ref_persona_nome {
+
+	public static void main(String[] args) {
+		try {
+			Persona p = new Persona();
+			
+			Field cercaNome = Persona.class.getDeclaredField("nome");
+			cercaNome.setAccessible(true);
+			
+			try {
+				System.out.println("nome della persona: " + cercaNome.get(p));
+			} catch (IllegalArgumentException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IllegalAccessException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		
+		
+		
+		} catch (NoSuchFieldException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SecurityException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+
+	}
+
+}

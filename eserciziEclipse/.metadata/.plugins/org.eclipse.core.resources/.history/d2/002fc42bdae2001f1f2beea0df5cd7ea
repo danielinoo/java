@@ -1,0 +1,17 @@
+
+public class Esempio_ref_4 {
+
+	public static void main(String[] args) {
+		try {
+			Class data = Class.forName("java.util.Date");
+			
+			Object oggetto = data.getDeclaredConstructors().newInstance();
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+
+	}
+
+}

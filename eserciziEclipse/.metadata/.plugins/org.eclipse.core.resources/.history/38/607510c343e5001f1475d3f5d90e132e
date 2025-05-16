@@ -1,0 +1,24 @@
+import java.util.LinkedList;
+
+public class casella_postale{
+    private LinkedList<String> messages = new LinkedList<>();
+
+    public synchronized void writeMessage(String message) {
+        messages.add(message);
+        System.out.println("Written: " + message);
+        notify();  // Avvisa lettore_messaggio
+    }
+
+    public synchronized String readMessage() {
+        while (messages.isEmpty()) {
+            try {
+                wait();  // Aspetta che ci siano messaggi
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+        String message = messages.removeFirst();
+        System.out.println("Read: " + message);
+        return message;
+    }
+}

@@ -1,0 +1,23 @@
+import java.lang.reflect.*;
+
+public class esercizio7_ref_persona_nome {
+
+	public static void main(String[] args) {
+		try {
+			Field cercaNome = Persona.class.getDeclaredField("nome");
+		
+		
+		
+		
+		} catch (NoSuchFieldException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SecurityException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+
+	}
+
+}

@@ -1,0 +1,77 @@
+import java.util.LinkedList;
+
+public class Cliente {
+	String ID;
+	String nome;
+	String cognome;
+	String email;
+	String password;
+	LinkedList<Prodotto> prodotti_acqustati = new LinkedList<>(); //lista dei prodotti acquistati dal cliente
+	Boolean registrato = false;//variabile che dice se il cliente è registrato o no
+	public Cliente(String iD, String nome, String cognome, String email, String password,
+			LinkedList<Prodotto> prodotti_acqustati, Boolean registrato) {
+		super();
+		ID = iD;
+		this.nome = nome;
+		this.cognome = cognome;
+		this.email = email;
+		this.password = password;
+		this.prodotti_acqustati = prodotti_acqustati;
+		this.registrato = registrato;
+	}
+	public String getID() {
+		return ID;
+	}
+	public void setID(String iD) {
+		ID = iD;
+	}
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	public String getCognome() {
+		return cognome;
+	}
+	public void setCognome(String cognome) {
+		this.cognome = cognome;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	public LinkedList<Prodotto> getProdotti_acqustati() {
+		return prodotti_acqustati;
+	}
+	public void setProdotti_acqustati(LinkedList<Prodotto> prodotti_acqustati) {
+		this.prodotti_acqustati = prodotti_acqustati;
+	}
+	public Boolean getRegistrato() {
+		return registrato;
+	}
+	public void setRegistrato(Boolean registrato) {
+		this.registrato = registrato;
+	}
+	@Override
+	public String toString() {
+		return "Cliente [ID=" + ID + ", nome=" + nome + ", cognome=" + cognome + ", email=" + email + ", password="
+				+ password + ", prodotti_acqustati=" + prodotti_acqustati + ", registrato=" + registrato + "]";
+	}
+	
+	
+	public void  Acquisto{
+		
+	}
+	
+}
+	
+	

@@ -1,0 +1,35 @@
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class test_calcolatrice {
+
+	@Test
+	void test_somma() {
+		Calcolatrice_v2 s = new Calcolatrice_v2();
+		
+		assertEquals(2, s.somma(1, 2)); 
+	}
+	
+	@Test
+	void test_sottrazione() {
+		Calcolatrice_v2 s = new Calcolatrice_v2();
+		
+		assertEquals(0, s.sottrazione(2, 2)); 
+	}
+	
+	@Test
+	void test_moltiplicazione(){
+		Calcolatrice_v2 s = new Calcolatrice_v2();
+		
+		assertEquals(2, s.moltiplicazione(1, 2)); 
+	}
+	
+	@Test
+	void test_divisione() {
+		Calcolatrice_v2 s = new Calcolatrice_v2();
+		
+		assertEquals(2, s.divisione(4, 2)); 
+	}
+
+}

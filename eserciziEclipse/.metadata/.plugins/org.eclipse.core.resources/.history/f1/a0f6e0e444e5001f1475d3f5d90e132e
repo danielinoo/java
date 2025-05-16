@@ -1,0 +1,23 @@
+public class Scrittore_messaggi  extends Thread {
+    private casella_postale cp;
+
+
+    public scrittore_messaggi(casella_postale cp) {
+		super();
+		this.cp = cp;
+	}
+
+
+	@Override
+    public void run() {
+        int count = 1;
+        while (true) {
+            cp.scrivi("messaggio" + count++);
+            try {
+                Thread.sleep(1000);  // Aspetta 1 secondo prima di scrivere il prossimo messaggio
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}

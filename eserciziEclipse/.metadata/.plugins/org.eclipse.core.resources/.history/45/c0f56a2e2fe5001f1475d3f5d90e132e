@@ -1,0 +1,14 @@
+import java.util.LinkedList;
+
+public class Smartphone extends Prodotto {
+	String azienda_produttrice;
+	String sistema_operativo;
+
+	public Smartphone(String iD, String nome, String descrizione, double prezzo, LinkedList<String> negozio,
+			String azienda_produttrice, String sistema_operativo) {
+		super(iD, nome, descrizione, prezzo, negozio);
+		this.azienda_produttrice = azienda_produttrice;
+		this.sistema_operativo = sistema_operativo;
+	}
+
+}

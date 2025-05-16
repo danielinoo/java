@@ -1,0 +1,18 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Calcolatrice c = new Calcolatrice(4, 2);
+		
+		
+		double  som = c.somma(4, 2);
+		System.out.println(som);
+		double  d = c.divisione(4, 2);
+		double  m = c.moltiplicazione(4, 2);
+		double  sot = c.sottrazione(4, 2);
+	
+
+	}
+
+}

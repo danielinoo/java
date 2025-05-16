@@ -1,0 +1,10 @@
+import java.lang.reflect.*;
+public class esempio2_ref {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+String str = "ciao";
+Method metodo = 
+	}
+
+}

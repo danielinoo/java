@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;ErroreDTO.java&apos; to &apos;JAVA4_esercizio5FK/src/main/java/com.spring.esercizio5.dto&apos;&#x0A;- Original project: &apos;EsameJava4&apos;&#x0A;- Destination element: &apos;JAVA4_esercizio5FK/src/main/java/com.spring.esercizio5.dto&apos;&#x0A;- Original element: &apos;com.spring.esameJava.dto.ErroreDTO.java&apos;" description="Copy compilation unit" destination="=JAVA4_esercizio5FK/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.spring.esercizio5.dto" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.spring.esameJava.dto{ErroreDTO.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1743410460732" units="1" version="1.0"/>
+</session>

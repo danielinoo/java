@@ -1,0 +1,65 @@
+import java.util.LinkedList;
+
+public class Prodotto {
+
+	String ID;
+	String nome;
+	String descrizione;
+	double prezzo;
+	LinkedList<String> negozio = new LinkedList<>("negozio roma ovest", "negozio anzio","negozio roma centro");
+
+	public Prodotto(String iD, String nome, String descrizione, double prezzo) {
+		super();
+		ID = iD;
+		this.nome = nome;
+		this.descrizione = descrizione;
+		this.prezzo = prezzo;
+	}
+
+	public String getID() {
+		return ID;
+	}
+
+	public void setID(String iD) {
+		ID = iD;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public String getDescrizione() {
+		return descrizione;
+	}
+
+	public void setDescrizione(String descrizione) {
+		this.descrizione = descrizione;
+	}
+
+	public double getPrezzo() {
+		return prezzo;
+	}
+
+	public void setPrezzo(double prezzo) {
+		this.prezzo = prezzo;
+	}
+
+	public LinkedList<String> getNegozio() {
+		return negozio;
+	}
+
+	public void setNegozio(LinkedList<String> negozio) {
+		this.negozio = negozio;
+	}
+
+	@Override
+	public String toString() {
+		return "Prodotto [ID=" + ID + ", nome=" + nome + ", descrizione=" + descrizione + ", prezzo=" + prezzo
+				+ ", negozio=" + negozio + "]";
+	}
+
+}

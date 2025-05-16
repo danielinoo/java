@@ -1,0 +1,23 @@
+JUnit – Test con eccezioni
+Ci sono casi in cui i nostri metodi lanciano delle eccezioni in caso di errore.
+Con JUnit, facendo fallire volutamente un test, possiamo verificare se viene lanciata l’eccezione
+corretta.
+class JUnitException {
+void testException() throws Exception {
+throw new Exception("Eccezione JUnit");
+}
+public static void main(String[] args) throws Exception {
+JUnitException ex = new JUnitException();
+ex.testException();
+}
+}
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+class JUnitExceptionTest {
+@Test
+void testTestException() {
+JUnitException ex = new JUnitException();
+Exception exception = assertThrows(Exception.class, () ‐> ex.testException());
+assertEquals("Eccezione JUnit", exception.getMessage());
+}
+}

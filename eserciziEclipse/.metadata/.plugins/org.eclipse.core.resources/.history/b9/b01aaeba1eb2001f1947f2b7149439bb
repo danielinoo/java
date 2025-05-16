@@ -1,0 +1,110 @@
+import java.io.IOException;
+import java.util.*;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+public class Main {
+
+    public static void main(String[] args) throws IOException {
+    	
+    	
+    	//cambio locale stato per i numeri che passano da virgola e punto (cambiano pure le date)
+    	Locale.setDefault(Locale.US);
+        
+        LinkedList<WiFi> lwifi = new LinkedList<WiFi>();
+        
+        for(int i = 0; i < 10; i++) {
+            lwifi.add(WiFi.MakeWifi());
+        }
+        
+        for(var x:lwifi) {
+            String a = String.format("%s,%s,%s,%f\n", x.getId(),x.getProtocollo(),
+                    x.getPassword(),x.getFrequenza());
+            System.out.println(a);
+        }
+        var fou = Util.OpenFileForWriting("wifi.dat");
+        for (var x : lwifi) {
+            String a = String.format("%s,%s,%s,%f\n", x.getId(),x.getProtocollo(),
+                    x.getPassword(),x.getFrequenza());
+            try {
+                fou.write(a);
+            }catch(IOException e) {
+                e.printStackTrace();
+            }
+        }
+        try {
+            fou.close();
+        }catch(IOException e) {
+            e.printStackTrace();
+        }
+        
+        
+        //rilettura lista da file
+        
+        
+        lwifi.clear();
+        //prendo il file in lettura
+       var la =Util.OpenFileForReading("wifi.dat");
+       
+       
+       //prendo le righe
+       String linea = la.readLine();
+       while (linea != null) {
+    	   
+    	   //prendo le parti della linea
+    	   String[] items = linea.split(",");
+    	   
+    	   //le aggiungo ad un oggetto WIFI
+    	   WiFi it = new WiFi(items[0],items[1], items[2],Double.parseDouble(items[3]));
+    	   
+    	   lwifi.add(it);
+    	   
+    	   linea = la.readLine();
+    	   
+    	   
+       }
+       
+       	la.close();
+      
+        
+        WiFi appo = WiFi.MakeWifi();
+        
+        //dicharo la stringa che conterra la descrizione i formato json
+        String jsoString;
+        
+        //consente di convertire un oggetto in una stringa json
+        ObjectMapper objectMapper = new ObjectMapper();
+        jsoString = objectMapper.writeValueAsString(appo);
+        System.out.println(jsoString);
+        
+        
+        //scrittura file json co tutti gli oggetti di una lista
+        fou = Util.OpenFileForWriting("wifi.txt");
+       for (var x : lwifi) {
+           String a = objectMapper.writeValueAsString(x);
+           fou.write(a+"\n");
+      }
+       
+       lwifi.clear();
+       
+       //lettura file
+       
+       var lj =Util.OpenFileForReading("wifi.txt");
+       String riga = la.readLine();
+       
+       while(riga != null) {
+    	   
+           ObjectMapper og = new ObjectMapper();
+           jsoString = og.writeValueAsString();
+           System.out.println(jsoString);
+    	   
+       }
+    	   
+
+      
+
+
+   	   
+       
+    }
+
+}

@@ -1,0 +1,7 @@
+
+public class Scrittore_messaggio extends Thread{
+
+	@Override
+    public void run() {}
+	
+}

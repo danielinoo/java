@@ -1,0 +1,19 @@
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class test_stringa {
+
+	@Test
+	void test_calcolacarattere() {
+		Stringa_2m s = new Stringa_2m();
+		
+		assertEquals(2,s.calcolacarattere('c', "ciao come stai"));
+	}
+
+	@Test
+	void test() {
+		Stringa_2m s = new Stringa_2m();
+	}
+
+}

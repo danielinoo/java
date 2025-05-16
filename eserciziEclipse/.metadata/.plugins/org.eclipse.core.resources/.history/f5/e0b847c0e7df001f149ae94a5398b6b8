@@ -1,0 +1,39 @@
+
+public class Stringa_2m {
+	
+	public int calcolacarattere(char a, String frase) {
+		int cont = 0;
+		char[] lettere = frase.toCharArray(); //converte una stringa in un array per lettera
+		
+		for (char i : lettere) { //controllo lettera per lettera
+			
+			if(a == i) {
+				cont ++;
+			}
+			
+		}
+			
+		
+		return cont;
+		
+	}
+	
+	public Boolean pal(String parola) {
+		Boolean v = null;
+		StringBuilder parola_rev = new StringBuilder(parola);
+		
+		parola_rev.reverse();
+		
+		if (parola == parola_rev.toString()) { //parola_rev.toString() --> parola riversa in stringa
+			v = true;
+		}else {
+			v = false;
+		}
+		
+		return v;
+		
+	}
+	
+	
+
+}

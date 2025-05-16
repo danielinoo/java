@@ -1,0 +1,54 @@
+import java.io.InputStream;
+import java.util.*;
+public class Main {
+
+
+	public static void main(String[] args) {
+		
+		int[] piani = {0,1,2,3};
+		int piano_corrente= 0;
+		int piano_raggiunto = 0;
+		Scanner piano_utente = new Scanner(System.in);
+		
+		
+		while(true) {
+			System.out.println("---------------");
+			System.out.println("scegli il piano (0,1,2,3)");
+			
+			int pu =piano_utente.nextInt();
+			
+			if (pu <= 3 && pu >= 0)
+			
+			//menu
+			
+			
+			//aggiornamento piano
+				if (pu != piano_corrente) {
+				 piano_raggiunto= Namo(pu, piano_corrente);
+				 System.out.println("hai raggiunto " + piano_raggiunto);
+				 piano_corrente = piano_raggiunto;
+				}
+				else {
+					System.out.println("hai gia raggiunto questo piano piano");
+				}
+		}
+		
+		
+	}
+
+	private static int Namo(int pu, int piano_corrente) {
+		
+				piano_corrente = pu;
+				return piano_corrente;
+
+			
+			
+			
+			
+			
+		}
+		
+	}
+
+
+

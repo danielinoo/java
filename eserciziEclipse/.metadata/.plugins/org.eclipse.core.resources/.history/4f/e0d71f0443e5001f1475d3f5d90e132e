@@ -1,0 +1,4 @@
+
+public class Scrittore_messaggio extends Thread{
+
+}

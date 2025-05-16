@@ -1,0 +1,9 @@
+
+public class Prodotto {
+	
+	String ID;
+	String nome;
+	String descrizione;
+	double prezzo;
+
+}

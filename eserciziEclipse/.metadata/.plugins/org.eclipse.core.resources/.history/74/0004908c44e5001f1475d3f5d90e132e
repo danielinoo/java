@@ -1,0 +1,19 @@
+public class lettore_messaggi extends Thread {
+    private casella_postale cp;
+
+    public lettore_messaggi(casella_postale cp) {
+        this.cp = cp;
+    }
+
+    @Override
+    public void run() {
+        while (true) {
+            	cp.leggi();
+            try {
+                Thread.sleep(1500);  // Aspetta 1,5 secondi prima di leggere il prossimo messaggio
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}

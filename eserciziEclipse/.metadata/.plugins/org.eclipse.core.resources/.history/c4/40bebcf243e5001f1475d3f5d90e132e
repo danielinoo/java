@@ -1,0 +1,19 @@
+public class lettore_messaggi extends Thread {
+    private Mailbox mailbox;
+
+    public Reader(Mailbox mailbox) {
+        this.mailbox = mailbox;
+    }
+
+    @Override
+    public void run() {
+        while (true) {
+            mailbox.readMessage();
+            try {
+                Thread.sleep(1500);  // Aspetta 1,5 secondi prima di leggere il prossimo messaggio
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}
